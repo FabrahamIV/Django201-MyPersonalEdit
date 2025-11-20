@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 100" width="220" height="100">
+  <defs>
+    <!-- Shadows -->
+    <filter id="switchShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-opacity="0.2"/>
+    </filter>
+    <filter id="knobShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="1" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  <!-- DAY SWITCH (ON State) -->
+  <g transform="translate(10, 10)">
+    <!-- Background Pill -->
+    <rect x="0" y="0" width="200" height="80" rx="40" fill="#AEC6CF" filter="url(#switchShadow)" stroke="white" stroke-width="2"/>
+    
+    <!-- Clouds (Day) -->
+    <path d="M40 50 Q50 35 65 45 Q75 30 90 40 Q100 35 110 45" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" opacity="0.6" />
+    <path d="M120 60 Q130 50 140 55" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" opacity="0.5" />
+    
+    <!-- Half Sun Icon (Left) -->
+    <g transform="translate(45, 40)">
+      <circle r="12" fill="#FDFD96" /> <!-- Pastel Yellow -->
+      <g stroke="#FDFD96" stroke-width="3" stroke-linecap="round">
+        <line x1="0" y1="-18" x2="0" y2="-22" />
+        <line x1="0" y1="18" x2="0" y2="22" />
+        <line x1="-18" y1="0" x2="-22" y2="0" />
+        <line x1="18" y1="0" x2="22" y2="0" />
+        <line x1="13" y1="-13" x2="16" y2="-16" />
+        <line x1="-13" y1="13" x2="-16" y2="16" />
+        <line x1="-13" y1="-13" x2="-16" y2="-16" />
+        <line x1="13" y1="13" x2="16" y2="16" />
+      </g>
+    </g>
+    <!-- Knob (Right) -->
+    <circle cx="160" cy="40" r="34" fill="white" filter="url(#knobShadow)" />
+  </g>
+</svg>
