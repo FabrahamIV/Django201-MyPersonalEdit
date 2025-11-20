@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <linearGradient id="blueGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#42A5F5" />
+      <stop offset="100%" stop-color="#1976D2" />
+    </linearGradient>
+    <linearGradient id="blueGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#90CAF9" />
+      <stop offset="100%" stop-color="#42A5F5" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="2" stdDeviation="2" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  <!-- Abstract F Shape -->
+  <g filter="url(#shadow)">
+    <!-- Top Bar / Wing -->
+    <path d="M30 20 L70 20 L50 50 L30 50 Z" fill="url(#blueGrad1)" />
+    
+    <!-- Middle Bar / Wing -->
+    <path d="M30 55 L60 55 L45 75 L30 75 Z" fill="url(#blueGrad2)" />
+    
+    <!-- Vertical Spine (Implicit or connected) -->
+    <!-- Let's make it more like folded ribbons -->
+    <path d="M30 20 L30 80 L45 80 L45 50 L50 50 L70 20 Z" fill="#0D47A1" opacity="0.2" style="mix-blend-mode: multiply;" />
+  </g>
+</svg>

@@ -1,0 +1,11 @@
+html {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+body.theme-transition * {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+#toggleIcon {
+  transition: opacity 0.3s ease;
+}
