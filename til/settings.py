@@ -15,7 +15,10 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATE_DIR = BASE_DIR / 'feed/templates/feed'
 STATIC_DIR = BASE_DIR / 'feed/static/feed'
-MEDIA_DIR = BASE_DIR / 'feed/media'
+MEDIA_DIR = BASE_DIR / 'media'
+MEDIA_ROOT = MEDIA_DIR
+MEDIA_URL = '/media/'
+
 
 # For login purpose
 SITE_ID = 1
@@ -61,10 +64,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
+
     'feed',
+    'profiles',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'sorl.thumbnail',
 ]
 
 MIDDLEWARE = [
