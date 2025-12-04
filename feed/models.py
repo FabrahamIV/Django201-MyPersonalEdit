@@ -7,7 +7,11 @@ class Post(models.Model):
     image = ImageField(upload_to='feed/images/', blank=True, null=True)
     description = models.TextField(max_length=1000, blank=True, null=True) # nullable
     created_at = models.DateTimeField(auto_now_add=True)
-    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True) 
+    author = models.ForeignKey(
+        User, 
+        on_delete=models.CASCADE, 
+        null=True, blank=True
+    ) 
 
     def __str__(self):
         return self.title[0:100]

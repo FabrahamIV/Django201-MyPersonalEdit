@@ -13,8 +13,8 @@ from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-TEMPLATE_DIR = BASE_DIR / 'feed/templates/feed'
-STATIC_DIR = BASE_DIR / 'feed/static/feed'
+TEMPLATE_DIR = BASE_DIR / 'feed/templates'
+STATIC_DIR = BASE_DIR / 'feed/static'
 MEDIA_DIR = BASE_DIR / 'media'
 MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = '/media/'

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load thumbnail %}
+
+{% block title %}Post Detail{% endblock %}
+
+{% block body %}
+<div class="p-4 flex justify-center">
+    <div class="w-full max-w-md max-w-xl shadow-lg rounded transition duration-500">
+        <img class="w-full w-full h-full h-full object-cover" src="{{ post.image.url }}" alt="" />
+
+    </div>
+</div>
+{% endblock %}
