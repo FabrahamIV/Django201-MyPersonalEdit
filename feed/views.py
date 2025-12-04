@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import ListView, DetailView
+from django.views.generic import ListView, DetailView, CreateView
 
 from .models import Post
 # Create your views here.
@@ -14,6 +14,13 @@ class HomePage(ListView):
 
 class PostDetailView(DetailView):
     http_method_names = ['get']
-    template_name = "post_detail.html"
+    template_name = "includes/post_detail.html"
+    model = Post
+    context_object_name = "post"
+
+
+class CreatedNewPost(CreateView):
+    http_method_names = ['get', 'post']
+    template_name = "includes/post_detail.html"
     model = Post
     context_object_name = "post"

@@ -53,3 +53,16 @@ body {
 .font-blue-vinyl {
   font-family: 'Blue Vinyl', sans-serif;
 }
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Stronger anchor rules to override third-party CSS (Bootstrap/Tailwind runtime)
+   and browser defaults. Explicitly include pseudo-classes so visited/hover
+   states don't revert to blue/underlined styles. */
+a, a:link, a:visited, a:hover, a:active {
+  text-decoration: none !important;
+  color: black !important;
+}
